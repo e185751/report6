@@ -13,4 +13,22 @@ public class Vector2 {
         result.y += vec.y;
         return result;
     }
+
+    public boolean equals(Vector2 vec){
+        if (this.x == vec.x && this.y == vec.y){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public Vector2 add(Vector2 vec){
+        return new Vector2(this.x + vec.x, this.y + vec.y);
+
+    }
+
+    public Vector2 copy(){
+        return new Vector2(this.x, this.y);
+    }
 }

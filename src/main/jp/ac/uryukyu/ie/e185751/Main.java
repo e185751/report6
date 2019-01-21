@@ -4,19 +4,20 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
         Board b = new Board(8);
-        b.boardInitialize();
+        WhitePlayer wp = new WhitePlayer();
+        BlackPlayer bp = new BlackPlayer();
+        b.boardInitialize(wp, bp);
         b.display();
+        int endFlag = 0;
+        boolean whiteTurn = true;
 
 
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        Vector2 point = new Vector2(x,y);
+        Player p;
 
 
-        WhitePlayer wp = new WhitePlayer();
-        wp.move(b, point);
 
-        b.display();
+
     }
+
 }
